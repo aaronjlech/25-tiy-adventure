@@ -7,7 +7,8 @@ const STORE = {
    data: {
       all_users: new UserCollection(),
       characters: new CharCollection(),
-      currentView: "Home"
+      currentView: "Home",
+      currentUser: "username"
 
    },
 

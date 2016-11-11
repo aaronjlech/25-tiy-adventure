@@ -5,8 +5,7 @@ const AppView = React.createClass({
 
    setInitialState: function(){
 
-
-
+      
       return STORE.getStoreData()
    }
 
@@ -19,25 +18,19 @@ const AppView = React.createClass({
    render: function()
 
 
-         switch (this.props.currentView) {
-            case "home":
-               return <HomeView/>
-               break;
-            case "login":
-               return <LoginView/>
-               break;
-            case "signup":
-               return <SignUpView/>
-            default:
-               return <h1> Page Not Found</h1>
-               break;
-         }
-
-
-
+      switch (this.props.currentView) {
+         case "home":
+            return <HomeView/>
+            break;
+         case "login":
+            return <LoginView/>
+            break;
+         case "signup":
+            return <SignUpView/>
+         default:
+            return <h1> Page Not Found</h1>
+            break;
       }
 
-
-
-
+      }
 })
