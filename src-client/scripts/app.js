@@ -16,7 +16,7 @@ const AppRouter = Backbone.Router.extend({
       'game/:user_id': "showGame"
       'login': "showLogin"
       'signup': "showSignup"
-      '*path': "showHome"
+      '': "showHome"
 
    },
 

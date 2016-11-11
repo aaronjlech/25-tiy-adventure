@@ -7,17 +7,9 @@ const AppView = React.createClass({
 
 
       return STORE.getStoreData()
-   }
-
-
-
-
-
-
+   },
 
    render: function()
-
-
       switch (this.props.currentView) {
          case "home":
             return <HomeView/>
