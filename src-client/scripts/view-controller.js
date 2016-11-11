@@ -1,0 +1,43 @@
+const React = require('react')
+
+
+const AppView = React.createClass({
+
+   setInitialState: function(){
+
+
+
+      return STORE.getStoreData()
+   }
+
+
+
+
+
+
+
+   render: function()
+
+
+         switch (this.props.currentView) {
+            case "home":
+               return <HomeView/>
+               break;
+            case "login":
+               return <LoginView/>
+               break;
+            case "signup":
+               return <SignUpView/>
+            default:
+               return <h1> Page Not Found</h1>
+               break;
+         }
+
+
+
+      }
+
+
+
+
+})

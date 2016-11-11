@@ -6,11 +6,22 @@ const STORE = require("./store.js")
 const ACTIONS = {
 
    fetchUserData: function(){
-   let userCollInst = new ToDoCollection()
+      let userCollInst = new ToDoCollection()
 
       return userCollInst.fetch().then(function(){
          STORE.setStore('all_users', userCollInst)
       })
+
+   },
+
+   handleUserLogin: function(usrName){
+      this.fetchUserData.filter(usrMdls){
+         if(usrMdls.get('name') === usrName){
+            let selectedUser = true
+         }
+         return selectedUser
+      }
+
 
    },
 
@@ -20,7 +31,7 @@ const ACTIONS = {
       newMod.set(modlVals)
 
       newMod.save().then(function(serverRes){
-         ACTIONS.fetchData()
+         ACTIONS.fetchUserData()
       })
 
    },
