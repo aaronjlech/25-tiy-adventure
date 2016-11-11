@@ -5,7 +5,7 @@ const AppView = React.createClass({
 
    setInitialState: function(){
 
-      
+
       return STORE.getStoreData()
    }
 
@@ -27,6 +27,8 @@ const AppView = React.createClass({
             break;
          case "signup":
             return <SignUpView/>
+         case "game":
+            return <GameView/>
          default:
             return <h1> Page Not Found</h1>
             break;

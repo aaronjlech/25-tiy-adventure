@@ -5,6 +5,11 @@ const ACTIONS = require('./actions.js')
 const STORE = require('./store.js')
 const Appview = require('./view-controller.js')
 
+// single render function
+let renderDom = function(ReactEl){
+   ReactDOM.render(ReactEl, document.querySelector("#app-container"))
+}
+
 const AppRouter = Backbone.Router.extend({
 
    routes: {
@@ -17,23 +22,22 @@ const AppRouter = Backbone.Router.extend({
 
    showHome: function(){
 
-
-      ReactDOM.render(<Appview curentView="home"/>, "#app-container")
+      return renderDom(<AppView currentView="home"/>)
    },
 
    showLogin: function(){
 
-      return <Appview currentView="login"/>
+      return renderDom(<AppView currentView="login"/>)
    },
 
    showSignup: function(){
 
-      return <AppView currentView="signup"/>
+      return renderDom(<AppView currentView="signup"/>)
    },
 
    showGame: function(){
 
-      return <AppView currentView="game"/>
+      return renderDom(<AppView currentView="game"/>)
          }
 
          initialize: function(){
