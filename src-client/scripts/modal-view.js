@@ -14,23 +14,17 @@ const ModalView = React.createClass({
 
 
 
-      return (
-         switch this.props.views
-
-         case "login":
-         return <div>
-            <nav>
-               <span>X</span>
-            </nav>
+         return (
             <div>
-               <LoginModal crntDisplay={this.state.crntModalState}/>
-               <CharPickModal/>
+               <nav>
+                  <span>X</span>
+               </nav>
+               <div>
+                  <LoginModal crntDisplay={this.state.crntModalState}/>
+                  <CharPickModal/>
+               </div>
             </div>
-         </div>
-         case "signup":
 
-
-            break;
       )
    }
 
