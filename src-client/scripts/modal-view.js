@@ -1,0 +1,85 @@
+const React = require('react')
+const ReactDOM = require('react-dom')
+const Backbone = require('backbone')
+
+
+const ModalView = React.createClass({
+   setInitialState: function(){
+      crntModalState: 'login'
+   },
+
+
+
+   render: function(){
+
+
+
+      return (
+         switch this.props.views
+
+         case "login":
+         return <div>
+            <nav>
+               <span>X</span>
+            </nav>
+            <div>
+               <LoginModal crntDisplay={this.state.crntModalState}/>
+               <CharPickModal/>
+            </div>
+         </div>
+         case "signup":
+
+
+            break;
+      )
+   }
+
+})
+
+const LoginModal = React.createClass({
+
+
+   _handleClick: function(){
+
+      this.setState({view: signup})
+   },
+
+   render: function(){
+
+      if
+
+      return (
+         <div>
+            <h3>Adventurer Info..</h3>
+            <form>
+               <input type='text'/>
+               <input type='text'/>
+               <input type='submit' value='Login'/>
+               <input type='submit' value='Sign-up'/>
+            </form>
+         </div>
+      )
+   }
+})
+
+
+
+const CharPickModal = React.createClass({
+
+   render: function(){
+
+      return (
+         <div>
+            <h3>Pick your adventurer..</h3>
+            <div>
+               <input type='checkbox'/>
+               <input type='checkbox'/>
+               <input type='checkbox'/>
+               <input type='checkbox'/>
+               <input type='checkbox'/>
+            </div>
+            <input type='submit'/>
+         </div>
+      )
+   }
+})

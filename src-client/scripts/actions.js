@@ -6,7 +6,7 @@ const STORE = require("./store.js")
 const ACTIONS = {
 
    fetchUserData: function(){
-      let userCollInst = new ToDoCollection()
+      let userCollInst = new UserCollection()
 
       return userCollInst.fetch().then(function(){
          STORE.setStore('all_users', userCollInst)
